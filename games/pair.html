@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pokemon Pair</title>
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="assets/style.css">
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="myFavicon.ico?" type="image/x-icon">
+    <link rel="icon" href="myFavicon.ico?" type="image/x-icon">
+    
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+
+</head>
+<body>
+
+    <!-- HEADER SECTION -->
+    <audio autoplay loop src="audio/harry_potter_theme.mp3">
+        Your browser does not support the element.
+    </audio>
+    <header>
+        <!-- HEADING -->
+        <div id="intro">
+            <h1>Pokemon Pair</h1>
+        </div>
+        <!-- TIME AND MOVES -->
+        <div id="timer" class="timer display">
+            <div class="pill">
+                <span class="move-counter date" id="moveCounter">0</span>
+                <div class="label">Moves</div>
+            </div>
+            <!-- <div class="pill">
+              <div id="hours" class="date"></div>
+              <div class="label">Hours</div>
+            </div> -->
+            <div class="pill">
+              <div id="minutes" class="date"></div>
+              <div class="label">Minutes</div>
+            </div>
+            <div class="pill">
+              <div id="seconds" class="date"></div>
+              <div class="label">Seconds</div>
+            </div>
+        </div>
+        <!-- POKEBALL (HELP) -->
+        <div class="box"></div>
+    </header>
+
+    <!-- GAME AREA -->
+    <main id="container">
+        <section>
+            <!-- BASIC SETTINGS -->
+            <div id="settings" class="btns">
+                <button class="btn range-button"><span class="range">16</span></button>
+                <input type="range" id="range" value="16" min="16" max="32" step="4">
+                <button class="btn play-button" id="tool" data-toggle="tooltip" data-placement="bottom" data-trigger="Play" name="start"><i class="fa fa-play"></i></button>
+                <p>Choose a difficulty level</p>
+            </div>
+            <!-- PIKACHU -->
+            <div class="container" id="pikachu">
+                <div class="left-ear">
+                    <div class="punta"></div>
+                </div>
+                <div class="right-ear">
+                    <div class="fillear"></div>
+                </div>
+                <div class="pik-body">
+                    <img class="shock-left" src="./img/shak.gif">
+                    <img class="shock-right" src="./img/shak.gif">
+                    <div class="pik-head">
+                    <div class="eye-left"></div>
+                    <div class="eye-right"></div>
+                    <div class="cheek-right"></div>
+                    <div class="nose"></div>
+                    <div class="mouth"></div>
+                    </div>
+                    <div class="mid">
+                    <div class="left-hand"></div>
+                    <div class="right-hand"></div>
+                    <div class="mark1"></div>
+                    <div class="mark2"></div>
+                    </div>
+                    <div class="left-foot"></div>
+                    <div class="right-foot"></div>
+                </div>
+                <div class="tail">
+                    <div class="part1"></div>
+                    <div class="part2"></div>
+                    <div class="part3"></div>
+                    <div class="part4"></div>
+                    <div class="part5"></div>
+                </div>
+            </div>
+            <!-- CARD AREA -->
+            <div id="gameArea" class="display">
+                <div class="game-status-details btns display" id="ratings">
+                    <!-- RATING -->
+                    <span class="rating">
+                        <input id="rating5" type="radio" name="rating" value="5" disabled>
+                        <label id="label5" for="rating5">5</label>
+                        <input id="rating4" type="radio" name="rating" value="4" disabled>
+                        <label id="label4" for="rating4">4</label>
+                        <input id="rating3" type="radio" name="rating" value="3" disabled>
+                        <label id="label3" for="rating3">3</label>
+                        <input id="rating2" type="radio" name="rating" value="2" disabled>
+                        <label id="label2" for="rating2">2</label>
+                        <input id="rating1" type="radio" name="rating" value="1" disabled>
+                        <label id="label1" for="rating1">1</label>
+                    </span>
+                    <!-- BUTTONS -->
+                    <button class='btn restart-button tool' id="restartButton" onClick="startGame()"><i class="fa fa-undo"></i></button>
+                    <!-- <button class='btn reset-button' name="reset"><i class="fa fa-reply-all"></i></button> -->
+                    <button class='btn hint-button tool' name="hint"><i class="fa fa-lightbulb"></i></button>
+                </div>
+                <!-- BASIC 4X4 GRID -->
+                <table class="game-board" id="game-board">
+                    <tbody class="game-grid">
+                        <tr class="game-grid-row" id="game-grid-row-1">
+                            <td class="game-card" id="game-card">
+                                <img class="game-card-img" src="img/p1.png" alt="poke1">
+                            </td>
+                            <td class="game-card" id="game-card">
+                                <img class="game-card-img" src="img/p2.png" alt="poke2">
+                            </td>
+                            <td class="game-card" id="game-card">
+                                <img class="game-card-img" src="img/p3.png" alt="poke3">
+                            </td>
+                            <td class="game-card" id="game-card">
+                                <img class="game-card-img" src="img/p4.png" alt="poke4">
+                            </td>
+                        </tr>
+                        <tr class="game-grid-row" id="game-grid-row-2">
+                            <td class="game-card" id="game-card">
+                                <img class="game-card-img" src="img/p5.png" alt="poke5">
+                            </td>
+                            <td class="game-card" id="game-card">
+                                <img class="game-card-img" src="img/p6.png" alt="poke6">
+                            </td>
+                            <td class="game-card" id="game-card">
+                                <img class="game-card-img" src="img/p7.png" alt="poke7">
+                            </td>
+                            <td class="game-card" id="game-card">
+                                <img class="game-card-img" src="img/p8.png" alt="poke8">
+                            </td>
+                        </tr>
+                        <tr class="game-grid-row" id="game-grid-row-3">
+                            <td class="game-card" id="game-card">
+                                <img class="game-card-img" src="img/p1.png" alt="poke1">
+                            </td>
+                            <td class="game-card" id="game-card">
+                                <img class="game-card-img" src="img/p2.png" alt="poke2">
+                            </td>
+                            <td class="game-card" id="game-card">
+                                <img class="game-card-img" src="img/p3.png" alt="poke3">
+                            </td>
+                            <td class="game-card" id="game-card">
+                                <img class="game-card-img" src="img/p4.png" alt="poke4">
+                            </td>
+                        </tr>
+                        <tr class="game-grid-row" id="game-grid-row-4">
+                            <td class="game-card" id="game-card">
+                                <img class="game-card-img" src="img/p5.png" alt="poke5">
+                            </td>
+                            <td class="game-card" id="game-card">
+                                <img class="game-card-img" src="img/p6.png" alt="poke6">
+                            </td>
+                            <td class="game-card" id="game-card">
+                                <img class="game-card-img" src="img/p7.png" alt="poke7">
+                            </td>
+                            <td class="game-card" id="game-card">
+                                <img class="game-card-img" src="img/p8.png" alt="poke8">
+                            </td>
+                        </tr>
+                    </tbody>               
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- GAME END SECTION -->
+    <div id="gameEnd" class="display">
+        <h2>Congratulations!</h2>
+        <p>Moves taken: <span id="totalMoves"></span></p>
+        <p>Time taken: <span id="totalTime"></span></p>
+        <p>Rating: <span id="finalRating"></span></p>
+    </div>
+    
+    <script src="assets/main.js"></script>
+    <noscript>Your broswer does not support JavaScript!</noscript>
+</body>
+</html>

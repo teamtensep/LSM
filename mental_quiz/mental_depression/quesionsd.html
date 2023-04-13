@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <title>Debolish</title>
+        <link rel="stylesheet" href="./css/style.css"/>
+    </head>
+    <body>
+        <p id="demo"></p>
+        <div class="box" id="questionscreen" >
+            <div class="title">
+                Depression test
+            </div>
+
+            <div class="header">
+                <!-- <div class="scorebox">Score : <span>0</span></div> -->
+                
+                <!-- <div class="timerbox">
+                    Time Left:<span></span>
+
+                </div> -->
+            </div>
+            <div class="questionbox">
+                Write qn
+            </div>
+            <div class="optionbox">
+                <span onclick="checkanswer(this)" data-opt="1"></span>
+                <span onclick="checkanswer(this)" data-opt="2"></span>
+                <!-- <span onclick="checkanswer(this)" data-opt="3"></span>
+                <span onclick="checkanswer(this)" data-opt="4"></span> -->
+            </div>
+
+            <div class="footer">
+                <button onclick="shownext()">Next</button>
+                <!-- <button onclick="showresult(1)">Show Result</button> -->
+            </div>
+            
+
+        </div>
+
+        <div class="box" id="resultscreen" style="display:none";>
+            <div class="title">
+                VITEEE Result
+            </div>
+
+            <div class="resultbox">
+                <label>Questions:</label>
+                <span id="totalquestion">10</span>
+                <label>Attempt:</label>
+                <span id="attemptquestion">0</span>
+                <label>Correct:</label>
+                <span id="correct">0</span>
+                <label>wrong:</label>
+                <span id="wronganswers">0</span>
+                <!-- <span id="depression"></label> -->
+
+            </div>
+            <div class="buttonbox">
+                <a href="D:\SEM 5\mental_quiz\mental\index.html" >Go to round 2</a>
+            </div>
+        </div>
+    </body>
+    
+    <script src="./js/quizd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" ></script>
+
+<!-- https://github.com/gijsroge/tilt.js -->
+<script src="https://unpkg.com/tilt.js@1.1.21/dest/tilt.jquery.min.js"></script>
+<script src = "./js/script.js"></script>
+    
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width", initial-scale="1.0">
+<title>Debolish</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="Free HTML Templates" name="keywords">
+<meta content="Free HTML Templates" name="description">
+
+<!-- Favicon -->
+<link href="img/d.png" rel="icon">
+
+<!-- Google Web Fonts -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">  
+
+<!-- Icon Font Stylesheet -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+<!-- Libraries Stylesheet -->
+<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+<link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+<!-- Customized Bootstrap Stylesheet -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Template Stylesheet -->
+<link href="css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="css/stylenew.css">
+</head>
+<body>
+         <!-- Navbar Start -->
+     <div class="container-fluid sticky-top bg-white shadow-sm">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0">
+                <a href="login.html" class="navbar-brand">
+                    <h1 class="m-0 text-uppercase text-primary"><i class="fa-thin fa-head-side-brain"></i>Debolish</h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+
+                        <a href="index.html" class="nav-item nav-link ">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="aboutnew.html" class="nav-item nav-link active">Dashboard</a>
+                        
+                        
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">More</a>
+                            <div class="dropdown-menu m-0">
+                                <a href="tests.html" class="dropdown-item">Tests</a>
+                                <a href="fun.html" class="dropdown-item">Fun</a>
+                                <a href="Resources.html" class="dropdown-item">Resources</a>
+                                <a href="chat.html" class="dropdown-item">Chat</a>
+                                <a href="blog.html" class="dropdown-item">Blog Grid</a>
+                                <a href="detail.html" class="dropdown-item">Challenges</a>
+                                <a href="team.html" class="dropdown-item">The Team</a>
+                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                                <a href="appointment.html" class="dropdown-item">Appointment</a>
+                               
+                            </div>
+                        </div>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <!-- <input type="submit" id="logout" name="logout" value="logout" /> -->
+                        <a href="login.html" class="nav-item nav-link" onclick="messagelogout()">Logout</a>
+                        <script>
+                            function messagelogout(){
+                                alert("User is Logged out!, To use our servies again Log in! See you soon :)")
+                            }
+                        </script>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!--code youtube-->
+<div class="container-fluid py-5">
+    <div class="contaniner">
+        <!-- <div class="text-center mx-auto mb-5" style="max-width: 500px;"> -->
+            <div class="user">
+                <img src="">
+            </div>
+            <div class="cardBox">
+                <div class="card">
+                    <div>
+                        <div class="numbers" akhi="124" style="color: #13C5DD;">0</div>
+                        <div class="cardName">Number of Users</div>
+                    </div>
+                    <div class="iconBx">
+                        <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="numbers" akhi="136" style="color: #13C5DD;" >0</div>
+                        <div class="cardName">Daily visitors</div>
+                    </div>
+                    <div class="iconBx">
+                        <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="numbers" akhi="112" style="color: #13C5DD;">0</div>
+                        <div class="cardName">Recovery rate</div>
+                    </div>
+                    <div class="iconBx">
+                        <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="numbers" akhi="50" style="color: #13C5DD;">0</div>
+                        <div class="cardName">Number of Mentors</div>
+                    </div>
+                    <div class="iconBx">
+                        <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                </div>
+            </div>
+            <!--add charts-->
+            <div class="graphBox">
+                <div class="box">
+                    <h1>Different health issues</h1><br>
+                    <br>
+                    <canvas id="myChart" ></canvas>
+                </div>
+                <div class="box">
+                    <h1>Users and their age</h1><br>
+                    <canvas id="earning" ></canvas>
+                </div>
+            </div>
+            <!--order details-->
+            <div class="details">
+                <div class="recentOrders">
+                    <div class="classHeader">
+                        <h2>Recent Challenges</h2>
+                        <a href="#" class="btn">View All</a>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Name</td>
+                                <!-- <td>Price</td> -->
+                                <td>Duration</td>
+                                <td>Status</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Yoga</td>
+                                <td>15min</td>
+                                <!-- <td>price</td> -->
+                                <td><span class="status delivered">Ongoing</span></td>
+                            </tr>
+                            <tr>
+                                <td>Meditation</td>
+                                <td>12 min</td>
+                                <!-- <td>price</td> -->
+                                <td><span class="status delivered">Completed</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+        <!--new custoners-->
+        <div class="recentCustomers">
+            <div class="cardHeader">
+                <h2>Popular Mentor</h2>
+
+            </div>
+            <table>
+                <tr>
+                    <td width="60px"><div class="imgBx"><img src="img/trophy.jpg"></div></td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;"><h4>David<br><span>Italy</span></h4></td>
+
+
+                </tr>
+            </table>
+        </div>
+        <div>
+            <audio controls>
+                <source src="img/Kesariya(PagalWorld.com.se).mp3" type="audio/mp3">
+
+            </audio>
+        </div>
+    </div>
+
+</div>
+</div>
+
+     <!-- Footer Start -->
+     <div class="container-fluid bg-dark text-light mt-5 py-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">Get In Touch</h4>
+                    <!-- <p class="mb-4">No dolore ipsum accusam no lorem. Invidunt sed clita kasd clita et et dolor sed dolor</p> -->
+                    
+                    <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>teamtensep@gmail.com</p>
+                    <p class="mb-0"><i class="fa fa-phone-alt text-primary me-3"></i>+012 345 67890</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">Quick Links</h4>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Home</a>
+                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>About Us</a>
+                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Our Services</a>
+                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Meet The Team</a>
+                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Latest Blog</a>
+                        <a class="text-light" href="#"><i class="fa fa-angle-right me-2"></i>Contact Us</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">Popular Links</h4>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Home</a>
+                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>About Us</a>
+                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Our Services</a>
+                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Meet The Team</a>
+                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Latest Blog</a>
+                        <a class="text-light" href="#"><i class="fa fa-angle-right me-2"></i>Contact Us</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">Newsletter</h4>
+                    <form action="">
+                        <div class="input-group">
+                            <input type="text" class="form-control p-3 border-0" placeholder="Your Email Address">
+                            <button class="btn btn-primary">Sign Up</button>
+                        </div>
+                    </form>
+                    <h6 class="text-primary text-uppercase mt-4 mb-3">Follow Us</h6>
+                    <div class="d-flex">
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-light border-top border-secondary py-4">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-md-0">&copy; <a class="text-primary" href="index.html">Debolish</a>. All Rights Reserved.</p>
+                </div>
+                <!-- <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Designed by <a class="text-primary" href="https://htmlcodex.com">HTML Codex</a></p>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!--icons-->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+    <script src="js/my_chart.js"></script>
+    <script src="js/count.js"></script>
+</body>
+</html>
